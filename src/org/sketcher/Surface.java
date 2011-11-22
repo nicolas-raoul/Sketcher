@@ -79,13 +79,16 @@ public final class Surface extends SurfaceView implements Callback {
 	private Bitmap bitmap;
 	private final HistoryHelper mHistoryHelper = new HistoryHelper(this);
 
+	// FIXME shouldn't be that complex for drawing thread lifecycle
+	private boolean isSurfaceCreated = false;
+
 	public Surface(Context context, AttributeSet attributes) {
 		super(context, attributes);
 
 		getHolder().addCallback(this);
 		setFocusable(true);
 	}
-	
+
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		switch (event.getAction()) {
@@ -103,6 +106,10 @@ public final class Surface extends SurfaceView implements Callback {
 	public DrawThread getDrawThread() {
 		if (drawThread == null) {
 			drawThread = new DrawThread();
+			if (isSurfaceCreated)
+				// it starts only if canvas is created. It means the thread was
+				// destroyed and should be started again
+				drawThread.start();
 		}
 		return drawThread;
 	}
@@ -124,10 +131,12 @@ public final class Surface extends SurfaceView implements Callback {
 	@Override
 	public void surfaceCreated(SurfaceHolder holder) {
 		getDrawThread().start();
+		isSurfaceCreated = true;
 	}
 
 	@Override
 	public void surfaceDestroyed(SurfaceHolder holder) {
+		isSurfaceCreated = false;
 		getDrawThread().stopDrawing();
 		while (true) {
 			try {
@@ -160,7 +169,7 @@ public final class Surface extends SurfaceView implements Callback {
 	public Bitmap getBitmap() {
 		return bitmap;
 	}
-	
+
 	public void undo() {
 		mHistoryHelper.undo();
 	}

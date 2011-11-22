@@ -5,10 +5,12 @@ Features:
 * 11 brushes
 * save to SD
 * share by e-mail, MMS, etc.
+* undo/redo
 
 Thanks to:
 
+* mrdoob - the author of original Harmony procedural drawing tool
 * Michael Crombeen - translation to French
 * Scott - translation to Korean
 * Piyush Mor - translation to Hindi
-* mrdoob - the author of original Harmony procedural drawing tool
+* jogios for translation to Spanish
