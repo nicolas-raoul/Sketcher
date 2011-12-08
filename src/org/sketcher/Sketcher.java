@@ -49,7 +49,8 @@ public class Sketcher extends Activity {
 			int versionCode = packageInfo.versionCode;
 
 			// version where changelog has been viewed
-			SharedPreferences settings = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+			SharedPreferences settings = getSharedPreferences(PREFS_NAME,
+					MODE_PRIVATE);
 			int viewedChangelogVersion = settings.getInt(
 					KEY_CHANGELOG_VERSION_VIEWED, 0);
 
@@ -168,14 +169,14 @@ public class Sketcher extends Activity {
 	Surface getSurface() {
 		return surface;
 	}
-	
-//	@Override
-//	public boolean onKeyDown(int keyCode, KeyEvent event) {
-//		switch(keyCode) {
-//		case KeyEvent.KEYCODE_BACK:
-//			getSurface().undo();
-//			return true;
-//		}
-//		return super.onKeyDown(keyCode, event);
-//	}
+
+	// @Override
+	// public boolean onKeyDown(int keyCode, KeyEvent event) {
+	// switch(keyCode) {
+	// case KeyEvent.KEYCODE_BACK:
+	// getSurface().undo();
+	// return true;
+	// }
+	// return super.onKeyDown(keyCode, event);
+	// }
 }
