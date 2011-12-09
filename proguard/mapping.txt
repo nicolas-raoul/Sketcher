@@ -1,4 +1,4 @@
-org.acra.ACRA -> org.acra.e:
+org.acra.ACRA -> org.acra.d:
     java.lang.String LOG_TAG -> a
     android.app.Application mApplication -> d
     org.acra.annotation.ReportsCrashes mReportsCrashes -> e
@@ -11,14 +11,14 @@ org.acra.ACRA -> org.acra.e:
     331:337:android.content.SharedPreferences getACRASharedPreferences() -> a
     346:346:org.acra.annotation.ReportsCrashes getConfig() -> b
     77:77:void access$000() -> c
-org.acra.ACRA$1 -> org.acra.k:
+org.acra.ACRA$1 -> org.acra.j:
     201:220:void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
-org.acra.ACRA$2 -> org.acra.j:
+org.acra.ACRA$2 -> org.acra.i:
     int[] $SwitchMap$org$acra$ReportingInteractionMode -> a
-org.acra.ACRAConfigurationException -> org.acra.r:
-org.acra.Compatibility -> org.acra.d:
+org.acra.ACRAConfigurationException -> org.acra.p:
+org.acra.Compatibility -> org.acra.c:
     40:52:int getAPILevel() -> a
-org.acra.ConfigurationInspector -> org.acra.p:
+org.acra.ConfigurationInspector -> org.acra.o:
     android.util.SparseArray mHardKeyboardHiddenValues -> a
     android.util.SparseArray mKeyboardValues -> b
     android.util.SparseArray mKeyboardHiddenValues -> c
@@ -31,7 +31,7 @@ org.acra.ConfigurationInspector -> org.acra.p:
     java.util.HashMap mValueArrays -> j
     120:139:java.lang.String toString(android.content.res.Configuration) -> a
     196:211:java.lang.String activeFlags(android.util.SparseArray,int) -> a
-org.acra.CrashReportData -> org.acra.t:
+org.acra.CrashReportData -> org.acra.r:
     org.acra.CrashReportData defaults -> a
     java.lang.String lineSeparator -> b
     93:130:void dumpString(java.lang.StringBuilder,java.lang.String,boolean) -> a
@@ -49,20 +49,20 @@ org.acra.CrashReportDialog -> org.acra.CrashReportDialog:
     48:48:android.widget.EditText access$000(org.acra.CrashReportDialog) -> a
     48:48:android.content.SharedPreferences access$100(org.acra.CrashReportDialog) -> b
     48:48:android.widget.EditText access$200(org.acra.CrashReportDialog) -> c
-org.acra.CrashReportDialog$1 -> org.acra.g:
+org.acra.CrashReportDialog$1 -> org.acra.f:
     org.acra.CrashReportDialog this$0 -> a
     131:161:void onClick(android.view.View) -> onClick
-org.acra.CrashReportDialog$2 -> org.acra.h:
+org.acra.CrashReportDialog$2 -> org.acra.g:
     org.acra.CrashReportDialog this$0 -> a
     171:173:void onClick(android.view.View) -> onClick
-org.acra.DeviceFeaturesCollector -> org.acra.u:
+org.acra.DeviceFeaturesCollector -> org.acra.s:
     35:61:java.lang.String getFeatures(android.content.Context) -> a
-org.acra.DropBoxCollector -> org.acra.l:
+org.acra.DropBoxCollector -> org.acra.k:
     java.lang.String[] SYSTEM_TAGS -> a
     56:124:java.lang.String read(android.content.Context,java.lang.String[]) -> a
-org.acra.DumpSysCollector -> org.acra.v:
+org.acra.DumpSysCollector -> org.acra.t:
     40:60:java.lang.String collectMemInfo() -> a
-org.acra.ErrorReporter -> org.acra.b:
+org.acra.ErrorReporter -> org.acra.ErrorReporter:
     boolean enabled -> a
     java.util.ArrayList mReportSenders -> b
     org.acra.CrashReportData mCrashProperties -> c
@@ -74,6 +74,7 @@ org.acra.ErrorReporter -> org.acra.b:
     java.lang.String mInitialConfiguration -> i
     org.acra.ReportingInteractionMode mReportingInteractionMode -> j
     245:256:void approvePendingReports() -> a
+    266:267:void addCustomData(java.lang.String,java.lang.String) -> addCustomData
     324:331:java.lang.String createCustomInfoString() -> g
     340:343:org.acra.ErrorReporter getInstance() -> b
     357:365:void init(android.content.Context) -> a
@@ -96,13 +97,13 @@ org.acra.ErrorReporter -> org.acra.b:
     1277:1278:void setAppStartDate(android.text.format.Time) -> a
     88:88:android.content.Context access$000() -> f
     88:88:void access$100(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
-org.acra.ErrorReporter$1 -> org.acra.m:
+org.acra.ErrorReporter$1 -> org.acra.l:
     org.acra.ErrorReporter this$0 -> a
     714:717:void run() -> run
-org.acra.ErrorReporter$2 -> org.acra.n:
+org.acra.ErrorReporter$2 -> org.acra.m:
     org.acra.ErrorReporter this$0 -> a
     920:920:boolean accept(java.io.File,java.lang.String) -> accept
-org.acra.ErrorReporter$ReportsSenderWorker -> org.acra.c:
+org.acra.ErrorReporter$ReportsSenderWorker -> org.acra.b:
     java.lang.String mCommentedReportFileName -> a
     java.lang.String mUserComment -> b
     java.lang.String mUserEmail -> c
@@ -113,12 +114,12 @@ org.acra.ErrorReporter$ReportsSenderWorker -> org.acra.c:
     175:177:void setUserComment(java.lang.String,java.lang.String) -> a
     188:190:void setUserEmail(java.lang.String,java.lang.String) -> b
     196:197:void setApprovePendingReports() -> a
-org.acra.LogCatCollector -> org.acra.i:
+org.acra.LogCatCollector -> org.acra.h:
     59:97:java.lang.String collectLogCat(java.lang.String) -> a
-org.acra.ReflectionCollector -> org.acra.f:
+org.acra.ReflectionCollector -> org.acra.e:
     39:54:java.lang.String collectConstants(java.lang.Class) -> a
     63:82:java.lang.String collectStaticGettersResults(java.lang.Class) -> b
-org.acra.ReportField -> org.acra.s:
+org.acra.ReportField -> org.acra.q:
     org.acra.ReportField REPORT_ID -> a
     org.acra.ReportField APP_VERSION_CODE -> b
     org.acra.ReportField APP_VERSION_NAME -> c
@@ -156,14 +157,14 @@ org.acra.ReportField -> org.acra.s:
     org.acra.ReportField[] $VALUES -> I
     26:26:org.acra.ReportField[] values() -> values
     26:26:org.acra.ReportField valueOf(java.lang.String) -> valueOf
-org.acra.ReportingInteractionMode -> org.acra.q:
-    org.acra.ReportingInteractionMode SILENT -> a
-    org.acra.ReportingInteractionMode NOTIFICATION -> b
-    org.acra.ReportingInteractionMode TOAST -> c
-    org.acra.ReportingInteractionMode[] $VALUES -> d
+org.acra.ReportingInteractionMode -> org.acra.ReportingInteractionMode:
+    org.acra.ReportingInteractionMode SILENT -> SILENT
+    org.acra.ReportingInteractionMode NOTIFICATION -> NOTIFICATION
+    org.acra.ReportingInteractionMode TOAST -> TOAST
+    org.acra.ReportingInteractionMode[] $VALUES -> $VALUES
     30:30:org.acra.ReportingInteractionMode[] values() -> values
     30:30:org.acra.ReportingInteractionMode valueOf(java.lang.String) -> valueOf
-org.acra.SettingsCollector -> org.acra.o:
+org.acra.SettingsCollector -> org.acra.n:
     45:65:java.lang.String collectSystemSettings(android.content.Context) -> a
     78:95:java.lang.String collectSecureSettings(android.content.Context) -> b
 org.acra.SharedPreferencesCollector -> org.acra.a:
@@ -329,15 +330,15 @@ org.sketcher.Surface -> org.sketcher.Surface:
     org.sketcher.HistoryHelper mHistoryHelper -> f
     boolean isSurfaceCreated -> g
     94:99:boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    103:104:void setStyle(org.sketcher.Style) -> setStyle
+    103:104:void setStyle(org.sketcher.Style) -> a
     107:114:org.sketcher.Surface$DrawThread getDrawThread() -> a
     120:129:void surfaceChanged(android.view.SurfaceHolder,int,int,int) -> surfaceChanged
     133:135:void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
     139:149:void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
     152:155:void clearBitmap() -> b
-    158:159:void setPaintColor(android.graphics.Paint) -> setPaintColor
+    158:159:void setPaintColor(android.graphics.Paint) -> a
     162:162:android.graphics.Paint getPaintColor() -> c
-    166:167:void setInitialBitmap(android.graphics.Bitmap) -> setInitialBitmap
+    166:167:void setInitialBitmap(android.graphics.Bitmap) -> a
     170:170:android.graphics.Bitmap getBitmap() -> d
     174:175:void undo() -> e
     77:77:org.sketcher.Controller access$0(org.sketcher.Surface) -> a
@@ -350,34 +351,7 @@ org.sketcher.Surface$DrawThread -> org.sketcher.b:
     63:64:void stopDrawing() -> a
     67:68:void pauseDrawing() -> b
     71:72:void resumeDrawing() -> c
-org.sketcher.colorpicker.AlphaPicker -> org.sketcher.colorpicker.AlphaPicker:
-    org.sketcher.colorpicker.Picker$OnColorChangedListener mListener -> a
-    android.graphics.Paint mColor -> b
-    float[] mHsv -> c
-    android.graphics.Paint mGradient -> d
-    android.graphics.Paint mTrackerPaint -> e
-    36:39:void onSizeChanged(int,int,int,int) -> onSizeChanged
-    43:48:void setColor(int) -> setColor
-    51:60:void applyChages(int,int) -> a
-    64:76:boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    81:82:void setOnColorChangedListener(org.sketcher.colorpicker.Picker$OnColorChangedListener) -> setOnColorChangedListener
-    86:98:void onDraw(android.graphics.Canvas) -> onDraw
-org.sketcher.colorpicker.HuePicker -> org.sketcher.colorpicker.HuePicker:
-    float[] MARGIN -> a
-    org.sketcher.colorpicker.Picker$OnColorChangedListener mListener -> b
-    int[] mColors -> c
-    android.graphics.Paint mColor -> d
-    android.graphics.Paint mGradient -> e
-    android.graphics.Paint mTrackerPaint -> f
-    40:47:void onSizeChanged(int,int,int,int) -> onSizeChanged
-    51:52:void setColor(int) -> setColor
-    56:57:void setOnColorChangedListener(org.sketcher.colorpicker.Picker$OnColorChangedListener) -> setOnColorChangedListener
-    61:75:void onDraw(android.graphics.Canvas) -> onDraw
-    85:95:boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    122:122:int ave(int,int,float) -> a
 org.sketcher.colorpicker.Picker -> org.sketcher.colorpicker.c:
-    void setOnColorChangedListener(org.sketcher.colorpicker.Picker$OnColorChangedListener) -> setOnColorChangedListener
-    void setColor(int) -> setColor
 org.sketcher.colorpicker.Picker$OnColorChangedListener -> org.sketcher.colorpicker.b:
     void colorChanged(android.graphics.Paint) -> a
 org.sketcher.colorpicker.PickerDialog -> org.sketcher.colorpicker.a:
@@ -405,23 +379,9 @@ org.sketcher.colorpicker.PreviewView -> org.sketcher.colorpicker.PreviewView:
     android.graphics.Paint mPaint -> a
     android.graphics.Paint mOldPaint -> b
     android.graphics.Paint mBorderPaint -> c
-    25:28:void setPaint(android.graphics.Paint) -> setPaint
-    31:33:void setColor(int) -> setColor
+    25:28:void setPaint(android.graphics.Paint) -> a
+    31:33:void setColor(int) -> a
     37:43:void onDraw(android.graphics.Canvas) -> onDraw
-org.sketcher.colorpicker.SatValPicker -> org.sketcher.colorpicker.SatValPicker:
-    org.sketcher.colorpicker.Picker$OnColorChangedListener mListener -> a
-    android.graphics.Paint mColor -> b
-    android.graphics.Paint mGradient -> c
-    android.graphics.Paint mTrackerPaint -> d
-    float mHue -> e
-    36:39:void onSizeChanged(int,int,int,int) -> onSizeChanged
-    42:54:void applyChages(int,int) -> a
-    58:65:void setColor(int) -> setColor
-    69:70:void setOnColorChangedListener(org.sketcher.colorpicker.Picker$OnColorChangedListener) -> setOnColorChangedListener
-    74:81:void onDraw(android.graphics.Canvas) -> onDraw
-    85:99:boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-org.sketcher.colorpicker.Utils -> org.sketcher.colorpicker.h:
-    7:14:float[] color2HSV(int) -> a
 org.sketcher.style.ChromeStyle -> org.sketcher.a.a:
     float prevX -> a
     float prevY -> b
