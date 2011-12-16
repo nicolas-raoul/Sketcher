@@ -313,7 +313,7 @@ org.sketcher.Sketcher$2 -> org.sketcher.e:
     org.sketcher.Sketcher this$0 -> a
     151:152:void colorChanged(android.graphics.Paint) -> a
 org.sketcher.SketcherApplication -> org.sketcher.SketcherApplication:
-    12:14:void onCreate() -> onCreate
+    16:18:void onCreate() -> onCreate
 org.sketcher.Style -> org.sketcher.h:
     void strokeStart(float,float) -> a
     void stroke(android.graphics.Canvas,float,float) -> a
